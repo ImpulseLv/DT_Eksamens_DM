@@ -48,7 +48,6 @@ public class WebSecurity {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
-
         @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http ,AuthenticationManager authenticationManager) throws Exception {
        CustomFilter mupaf = new CustomFilter();
