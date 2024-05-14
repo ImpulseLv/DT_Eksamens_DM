@@ -62,6 +62,7 @@ public class WebSecurity {
                         mupaf,
                         UsernamePasswordAuthenticationFilter.class)
                 .httpBasic().disable()
+                //@todo refactoring
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers("/registration1").hasRole("A")
                         .anyRequest().permitAll()

@@ -1,5 +1,6 @@
 package utility;
 
+import com.example.demo.entity.User;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
@@ -15,12 +16,12 @@ public class AuthUtils {
     }
 
 
-    public static UserDetails currentUserDetails(){
+    public static User currentUserDetails(){
         SecurityContext securityContext = SecurityContextHolder.getContext();
         Authentication authentication = securityContext.getAuthentication();
         if (authentication != null) {
             Object principal = authentication.getPrincipal();
-            return principal instanceof UserDetails ? (UserDetails) principal : null;
+            return principal instanceof User ? (User) principal : null;
         }
         return null;
     }

@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.Service.RoleService;
 import com.example.demo.entity.Role;
+import com.example.demo.entity.User;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,15 +15,14 @@ import utility.AuthUtils;
 @RequestMapping("/roles")
 public class RoleController {
 
-    private final RoleService roleService;
-
-    public RoleController(RoleService roleService) {
-        this.roleService = roleService;
-    }
-
-    @GetMapping("/user")
-    public ResponseEntity<UserDetails> getUserRole() {
-        UserDetails user = AuthUtils.currentUserDetails();
-        return ResponseEntity.ok(user);
+    @GetMapping("/currentRole")
+    public ResponseEntity<Role> getUserRole() {
+        User user = AuthUtils.currentUserDetails();
+        if (user != null) {
+            Role role = user.getRoles().stream().findFirst().orElse(null);
+            return ResponseEntity.ok(role);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

@@ -12,7 +12,7 @@ public class RoleService {
 
     @Autowired
     private RoleRepository roleRepository;
-    private Role findOrCreateRole(String roleName) {
+    public Role findOrCreateRole(String roleName) {
         Role existingRole = roleRepository.findByName(roleName);
 
         if (existingRole != null) {
