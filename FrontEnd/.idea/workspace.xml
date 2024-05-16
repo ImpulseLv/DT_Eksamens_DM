@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94e5344e-7a81-46d9-9b4a-cffea6552c73" name="Changes" comment="Jauno lapu izveidošana" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="6aa21370-8a07-4af1-9fc9-5a4b0a7801c3" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6aa21370-8a07-4af1-9fc9-5a4b0a7801c3" />
+        <option name="url" value="https://github.com/ImpulseLv/EksamenaDarbs.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2RBzXXZHAaTm2KQP1UdaWizjGvI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\IntelliJ IDEA 2023.2.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Prakse2\my-app\public\images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="npm" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94e5344e-7a81-46d9-9b4a-cffea6552c73" name="Changes" comment="" />
+      <created>1686738302523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686738302523</updated>
+      <workItem from="1686738303575" duration="2565000" />
+      <workItem from="1686818532914" duration="3398000" />
+      <workItem from="1686907807996" duration="607000" />
+      <workItem from="1687114145876" duration="659000" />
+      <workItem from="1687165981976" duration="3893000" />
+      <workItem from="1687189662874" duration="2025000" />
+      <workItem from="1687256520694" duration="13575000" />
+      <workItem from="1687336929082" duration="10614000" />
+      <workItem from="1687376923155" duration="273000" />
+      <workItem from="1687426509933" duration="8540000" />
+      <workItem from="1695026453035" duration="9238000" />
+      <workItem from="1695111730828" duration="9179000" />
+      <workItem from="1695132814825" duration="2177000" />
+      <workItem from="1695135184319" duration="1295000" />
+      <workItem from="1695204134190" duration="5004000" />
+      <workItem from="1695210149788" duration="4983000" />
+      <workItem from="1695215880666" duration="5706000" />
+      <workItem from="1695222515556" duration="900000" />
+      <workItem from="1695287062216" duration="5241000" />
+      <workItem from="1695298678390" duration="3310000" />
+      <workItem from="1695369850054" duration="3627000" />
+      <workItem from="1695374193269" duration="2679000" />
+      <workItem from="1695632818363" duration="670000" />
+      <workItem from="1695804769904" duration="5258000" />
+      <workItem from="1695978626557" duration="2393000" />
+      <workItem from="1696233573971" duration="8863000" />
+      <workItem from="1696250220033" duration="1254000" />
+      <workItem from="1696327768911" duration="4600000" />
+      <workItem from="1696333502189" duration="5111000" />
+      <workItem from="1696409200562" duration="4979000" />
+      <workItem from="1696414603762" duration="60000" />
+      <workItem from="1696414686507" duration="1146000" />
+      <workItem from="1696423450201" duration="6076000" />
+      <workItem from="1696498667649" duration="1231000" />
+      <workItem from="1696582283019" duration="4051000" />
+      <workItem from="1696596906873" duration="608000" />
+      <workItem from="1696848193652" duration="3724000" />
+      <workItem from="1696938575166" duration="616000" />
+      <workItem from="1697012015879" duration="2000000" />
+      <workItem from="1697030747262" duration="1167000" />
+      <workItem from="1697102615841" duration="604000" />
+      <workItem from="1697193646111" duration="923000" />
+      <workItem from="1697448924370" duration="685000" />
+      <workItem from="1697458949883" duration="704000" />
+      <workItem from="1697531710378" duration="603000" />
+      <workItem from="1698927974696" duration="1787000" />
+      <workItem from="1699004381571" duration="12340000" />
+      <workItem from="1699433776583" duration="4908000" />
+      <workItem from="1699440362034" duration="958000" />
+      <workItem from="1699441505915" duration="95000" />
+      <workItem from="1699441774777" duration="87000" />
+      <workItem from="1699445175117" duration="4165000" />
+      <workItem from="1699556424997" duration="509000" />
+      <workItem from="1699795106423" duration="784000" />
+      <workItem from="1699795942005" duration="252000" />
+      <workItem from="1699796327800" duration="522000" />
+      <workItem from="1699868842045" duration="1266000" />
+      <workItem from="1699962171332" duration="7046000" />
+      <workItem from="1700053806804" duration="1101000" />
+      <workItem from="1700128104288" duration="428000" />
+      <workItem from="1700134281843" duration="3803000" />
+      <workItem from="1700218247132" duration="1090000" />
+      <workItem from="1700225070634" duration="861000" />
+      <workItem from="1702570001971" duration="82000" />
+      <workItem from="1703161858939" duration="651000" />
+      <workItem from="1703240265591" duration="1219000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

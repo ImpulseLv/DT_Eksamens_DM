@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.centered-container {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  max-width: 600px;
+
+}
+body {
+  background-image: url('images/background.png');
+  background-repeat: repeat;
+  background-size: auto;
+}
+.animalListBlock {
+  background-color: white;
+
+
+}
+h2 {
+  color: #009eff;
+  border-bottom: 2px solid #009eff;
+  margin: 0;
+}
+
+.headBlock {
+  background-color: #282c34;
+  text-align: center;
+  margin: 0;
+  padding-top: 10px;
+  position: relative;
+  top: 0;
+  height: 80px;
+}
+.loginBlock {
+  background-color: #282c34;
+  width: 200px;
+  text-align: center;
+}
+h3 {
+  color: #009eff;
+  margin: 0;
+}
+
+.pLogin {
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+}
+.loginBlock2 {
+  background-color: #282c34;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #3498db; /* Blue background */
+  color: #fff; /* White text */
+  padding: 10px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-buttons a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-buttons a:hover {
+  color: #ecf0f1; /* Light grey on hover */
+}
+
+.navbar-auth a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-auth a:hover {
+  color: #ecf0f1; /* Light grey on hover */
+}
+
+.button-clicked {
+  background-color: gray;
+  color: #3498db;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.button-clicked:hover {
+  background-color: gray;
+}

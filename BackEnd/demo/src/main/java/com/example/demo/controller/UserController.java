@@ -1,21 +1,28 @@
 package com.example.demo.controller;
 
+import com.example.demo.Service.RoleService;
 import com.example.demo.Service.UserService;
+import com.example.demo.dto.CreateUserDto;
 import com.example.demo.dto.UsersFilter;
+import com.example.demo.entity.Role;
 import com.example.demo.entity.User;
+import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 @RestController
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
-    public UserController(UserService userService) {
+    private final RoleService roleService;
+    public UserController(UserService userService, RoleService roleService) {
         this.userService = userService;
+        this.roleService = roleService;
     }
 
     //@todo refactoring pageable, filter by username
@@ -27,9 +34,14 @@ public class UserController {
     }
 
 
-
+    @Transactional
     @PostMapping("/newUsers")
-    public ResponseEntity<String> createUser(@RequestBody User user) {
+    public ResponseEntity<String> createUser(@RequestBody CreateUserDto dto) {
+        Role role = roleService.findOrCreateRole(dto.getRoles());
+        User user = new User();
+        user.setUsername(dto.getUsername());
+        user.setPassword(dto.getPassword());
+        user.setRoles(Collections.singleton(role));
         boolean created = userService.saveUser(user);
         if (created) {
             return ResponseEntity.status(HttpStatus.CREATED).body("User created successfully");
