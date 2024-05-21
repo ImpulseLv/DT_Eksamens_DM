@@ -9,6 +9,7 @@ import {MainPage} from "./Pages/MainPage/MainPage";
 import {UserComponent} from "./Pages/Users/UserList";
 import {NewUsers} from "./Pages/Users/NewUsers";
 import {RolesCheck} from "./Pages/Users/Components/RolesCheck";
+import {UserEditForm} from "./Pages/Users/UserEditForm";
 
 export const router = createBrowserRouter([
     {
@@ -29,20 +30,24 @@ export const router = createBrowserRouter([
     },
     {
         path: "animals/:id",
-        element: <AnimalEditForm/>,
+        element: <RolesCheck roles={['ADMIN', 'MODERATOR']}><AnimalEditForm/></RolesCheck>,
     },
     {
         path:"animals/newAnimal",
-        element: <NewAnimals/>
+        element: <RolesCheck roles={['ADMIN', 'MODERATOR']}><NewAnimals/></RolesCheck>
     },
     {
         path:"users/newUsers",
-        element: <NewUsers/>
+        element: <RolesCheck roles={['ADMIN']}><NewUsers/></RolesCheck>
     },
     {
       path:"users",
-      element: <UserComponent/>
-    }
+      element: <RolesCheck roles={['ADMIN']}><UserComponent/></RolesCheck>
+    },
+    {
+      path:"users/:id",
+      element:<UserEditForm/>
+    },
 ]);
 
 

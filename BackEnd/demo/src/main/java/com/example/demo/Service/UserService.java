@@ -1,6 +1,7 @@
 package com.example.demo.Service;
 
 
+import com.example.demo.dto.CreateUserDto;
 import com.example.demo.entity.Role;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
@@ -14,8 +15,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.awt.print.Pageable;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 
@@ -78,6 +79,30 @@ public class UserService implements UserDetailsService {
     public List<User> usergtList(Long idMin) {
         return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)
                 .setParameter("paramId", idMin).getResultList();
+    }
+
+    @Transactional
+    public boolean updateUser(Long userId, CreateUserDto dto) {
+        Optional<User> optionalUser = userRepository.findById(userId);
+        if (!optionalUser.isPresent()) {
+            return false;
+        }
+
+        User user = optionalUser.get();
+        user.setUsername(dto.getUsername());
+
+        if (!"".equals(dto.getPassword()) || dto.getPassword() != null) {
+            user.setPassword(bCryptPasswordEncoder.encode(dto.getPassword()));
+        }
+        if(user.getRoles() == null) {
+            user.setRoles(new HashSet<>());
+        }else {
+            user.getRoles().clear();
+        }
+            Role role = roleService.findOrCreateRole(dto.getRoles().toString());
+            user.getRoles().add(role);
+            userRepository.save(user);
+        return true;
     }
 
 }

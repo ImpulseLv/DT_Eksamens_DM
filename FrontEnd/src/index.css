@@ -21,8 +21,12 @@ code {
   max-width: 600px;
 
 }
+html , body {
+  min-height: 100%;
+}
+
 body {
-  background-image: url('images/background.png');
+  background: linear-gradient(to bottom, deepskyblue , blue);
   background-repeat: repeat;
   background-size: auto;
 }
@@ -32,8 +36,8 @@ body {
 
 }
 h2 {
-  color: #009eff;
-  border-bottom: 2px solid #009eff;
+  color: white;
+  border-bottom: 2px solid darkgrey;
   margin: 0;
 }
 
@@ -67,8 +71,8 @@ h3 {
 }
 
 .navbar {
-  background-color: #3498db; /* Blue background */
-  color: #fff; /* White text */
+  background: linear-gradient(to right, grey, darkgrey);
+  color: #fff;
   padding: 10px 0;
 }
 
@@ -99,7 +103,7 @@ h3 {
 }
 
 .navbar-buttons a:hover {
-  color: #ecf0f1; /* Light grey on hover */
+  color: #ecf0f1;
 }
 
 .navbar-auth a {
@@ -109,11 +113,11 @@ h3 {
 }
 
 .navbar-auth a:hover {
-  color: #ecf0f1; /* Light grey on hover */
+  color: #ecf0f1;
 }
 
 .button-clicked {
-  background-color: gray;
+  background-color: rgb(128, 128, 128);
   color: #3498db;
   border-radius: 4px;
   padding: 8px 16px;
@@ -121,5 +125,45 @@ h3 {
 }
 
 .button-clicked:hover {
-  background-color: gray;
+  background-color: rgb(128, 128, 128);
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid darkgrey;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section.blue {
+  margin: 1.5rem;
+  background: linear-gradient(to right, rgba(0,127,216,255), rgba(0,182,248,255));
+}
+
+.section.grey {
+  background: linear-gradient(to right, grey, darkgrey);
+  margin: 1.5rem;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+  color: white; /* Makes title and text white */
+}
+
+.image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Adds rounded corners to images */
 }

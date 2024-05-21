@@ -5,6 +5,7 @@ import { Form, Formik} from "formik";
 import Button from "@mui/material/Button";
 import {FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
 import {User} from "../../../Types/User";
+import {prop} from "react-data-table-component/dist/src/DataTable/util";
 
 export interface AbstractUserFormProps{
     initialValues : User
@@ -12,7 +13,8 @@ export interface AbstractUserFormProps{
     isLoading: boolean;
 }
 export const AbstractUserForm: React.FC<AbstractUserFormProps> = (props) => {
-
+    console.log(props)
+    const isEditing = !props.initialValues.id;
     return (
         <div className="centered-container">
             <Formik initialValues={props.initialValues} onSubmit={props.handleFormSubmit}>
@@ -21,13 +23,13 @@ export const AbstractUserForm: React.FC<AbstractUserFormProps> = (props) => {
                   }) => (
                     <Form onSubmit={handleSubmit}>
                         <p>
-                            <Link to={"/animals/"}><Button variant="text" size="small">← Back</Button></Link>
+                            <Link to={"/users/"}><Button variant="text" size="small">← Back</Button></Link>
                         </p>
                         <p>
-                            <TextField fullWidth id="outlined-basic" label="Username" variant="outlined"  name="username" value={values.username} onChange={handleChange}  />
+                            <TextField fullWidth id="outlined-basic" required label="Username" variant="outlined"  name="username" value={values.username} onChange={handleChange}  />
                         </p>
                         <p>
-                            <TextField fullWidth id="outlined-basic" label="Password" variant="outlined"  name="password" value={values.password} onChange={handleChange} />
+                            <TextField fullWidth id="outlined-basic" required = {isEditing} label="Password" variant="outlined"  name="password" value={values.password} onChange={handleChange} />
                         </p>
                         <p>
                             <FormControl fullWidth>
@@ -35,6 +37,7 @@ export const AbstractUserForm: React.FC<AbstractUserFormProps> = (props) => {
                                 <Select
                                     labelId="demo-simple-select-label"
                                     id="demo-simple-select"
+                                    required
                                     name="roles"
                                     value={values.roles}
                                     label="Roles"

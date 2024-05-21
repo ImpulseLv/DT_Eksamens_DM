@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e78b-cfbc-4443-b172-f58f1537887d" name="Changes" comment="Pievienota metode lai dabūt informāciju par esošo lietotāju">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/CreateUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/CreateUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/LoginAndRegister/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/LoginAndRegister/AuthContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/AboutPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/AbstractUserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/AbstractUserForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/RolesCheck.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/RolesCheck.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/NewUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/NewUsers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Types/CreateUserDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Types/CreateUserDto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Types/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +53,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Экзамен/FrontEnd&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DT_Eksamens_DM/FrontEnd&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -108,6 +123,10 @@
       <workItem from="1715759079819" duration="11392000" />
       <workItem from="1715850383062" duration="2804000" />
       <workItem from="1715876052983" duration="1813000" />
+      <workItem from="1715883060603" duration="61000" />
+      <workItem from="1715943228184" duration="5390000" />
+      <workItem from="1716196248106" duration="5464000" />
+      <workItem from="1716282777970" duration="4601000" />
     </task>
     <servers />
   </component>
@@ -117,5 +136,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pievienota metode lai dabūt informāciju par esošo lietotāju" />
     <option name="LAST_COMMIT_MESSAGE" value="Pievienota metode lai dabūt informāciju par esošo lietotāju" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.demo.entity.User" memberName="password" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

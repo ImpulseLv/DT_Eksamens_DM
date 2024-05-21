@@ -13,6 +13,7 @@ export const NewUsers: React.FC = () => {
     const navigate = useNavigate();
 
     const [newUserData, setNewUserData] = useState<CreateUserDto>({
+        id: "",
         username: "",
         password: "",
         roles: "",

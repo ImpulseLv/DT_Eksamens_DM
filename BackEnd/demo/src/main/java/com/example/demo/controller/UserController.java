@@ -37,7 +37,7 @@ public class UserController {
     @Transactional
     @PostMapping("/newUsers")
     public ResponseEntity<String> createUser(@RequestBody CreateUserDto dto) {
-        Role role = roleService.findOrCreateRole(dto.getRoles());
+        Role role = roleService.findOrCreateRole(dto.getRoles().toString());
         User user = new User();
         user.setUsername(dto.getUsername());
         user.setPassword(dto.getPassword());
@@ -80,4 +80,16 @@ public class UserController {
         List<User> users = userService.usergtList(idMin);
         return ResponseEntity.ok(users);
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'MODERATOR')")
+    @PutMapping("/users/{userId}")
+    public ResponseEntity<String> updateUser(@PathVariable Long userId, @RequestBody CreateUserDto dto) {
+        boolean updated = userService.updateUser(userId, dto);
+        if (updated) {
+            return ResponseEntity.ok("User updated successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        }
+    }
+
 }
