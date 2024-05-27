@@ -5,6 +5,7 @@ import moment from "moment";
 import Button from '@mui/material/Button';
 import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
+import Footer from "../MainPage/Footer";
 
 const baseURL = "http://localhost:8080/users";
 
@@ -82,6 +83,7 @@ export function UserComponent() {
                     data={users}
                 />
             </div>
+            <Footer />
         </>
     );
 }

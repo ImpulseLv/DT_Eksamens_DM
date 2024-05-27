@@ -32,6 +32,7 @@ body {
 }
 .animalListBlock {
   background-color: white;
+  padding-top: 4rem ;
 
 
 }
@@ -74,6 +75,12 @@ h3 {
   background: linear-gradient(to right, grey, darkgrey);
   color: #fff;
   padding: 10px 0;
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
 .navbar-container {
@@ -96,36 +103,21 @@ h3 {
   align-items: center;
 }
 
-.navbar-buttons a {
-  margin: 0 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar-buttons a:hover {
-  color: #ecf0f1;
-}
-
+.navbar-buttons a,
 .navbar-auth a {
-  margin-left: 20px;
-  color: #fff;
+  color: white;
   text-decoration: none;
-}
-
-.navbar-auth a:hover {
-  color: #ecf0f1;
-}
-
-.button-clicked {
-  background-color: rgb(128, 128, 128);
-  color: #3498db;
+  margin: 0 10px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 4px;
-  padding: 8px 16px;
-  text-decoration: none;
 }
 
-.button-clicked:hover {
-  background-color: rgb(128, 128, 128);
+.navbar-buttons a:hover,
+.navbar-auth a:hover {
+  background-color: #555;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .about-page {
@@ -165,5 +157,87 @@ h3 {
 .image img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Optional: Adds rounded corners to images */
+  border-radius: 8px;
+}
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.app-content {
+  flex: 1;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(to right, grey, darkgrey);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+footer .section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  text-align: left;
+}
+
+footer .section p {
+  font-size: 18px;
+  color: #fff;
+}
+
+footer .section a {
+  color: steelblue;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+footer .column {
+  max-width: 250px;
+}
+
+footer .column h4 {
+  color: steelblue;
+}
+
+footer .column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .column ul li {
+  margin-bottom: 1rem;
+}
+
+footer .contact-item {
+  margin: 0;
+}
+
+footer .contact-item i {
+  color: steelblue;
+  padding-bottom: 1rem;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  padding-top: 20px;
 }

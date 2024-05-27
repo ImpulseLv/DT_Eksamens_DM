@@ -1,7 +1,5 @@
-import {Box} from "@mui/system";
 import React, {useEffect, useState} from "react";
-import AboutPage from "./AboutPage";
-import {Container, Grid, Paper, Typography} from "@mui/material";
+import {Container, Grid, Paper, Slide, Typography} from "@mui/material";
 import axios from "axios";
 
 const HomePage = () => {
@@ -30,7 +28,7 @@ const HomePage = () => {
     }, []);
 
     return(
-        <Container style={{padding: '0'}}>
+        <Container id={"home"} style={{padding: '0'}}>
             <Grid container spacing={3} justifyContent="center" alignItems="center" style={{ minHeight: '50vh' }}>
                 <Grid item>
                     <Paper elevation={3} style={{ padding: '20px', textAlign: 'center',height: '135px', width: '200px' }}>

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Container} from "@mui/material";
 const AboutPage = () => {
     const sections = [
         {
@@ -37,7 +36,7 @@ const AboutPage = () => {
     return (
         <div>
             {sections.map((section, index) => (
-                <div key={index} className={`section ${index % 2 === 0 ? 'blue' : 'grey'}`}>
+                <div key={index} id={'about'} className={`section ${index % 2 === 0 ? 'blue' : 'grey'}`}>
                     <div className="text">
                         <h2>{section.title}</h2>
                         <p>{section.text}</p>

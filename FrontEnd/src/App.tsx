@@ -10,11 +10,16 @@ import {UserComponent} from "./Pages/Users/UserList";
 import {NewUsers} from "./Pages/Users/NewUsers";
 import {RolesCheck} from "./Pages/Users/Components/RolesCheck";
 import {UserEditForm} from "./Pages/Users/UserEditForm";
+import AboutPage from "./Pages/MainPage/AboutPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainPage/>
+    },
+    {
+      path: "/",
+      element: <AboutPage/>
     },
     {
       path: "registration",

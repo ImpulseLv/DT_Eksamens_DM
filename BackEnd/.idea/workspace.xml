@@ -5,24 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e78b-cfbc-4443-b172-f58f1537887d" name="Changes" comment="Pievienota metode lai dabūt informāciju par esošo lietotāju">
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/HomePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserEditForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/ContactPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/ImageList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/CreateUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/LoginAndRegister/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/LoginAndRegister/AuthContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/AboutPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/AbstractUserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/AbstractUserForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/RolesCheck.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/RolesCheck.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/NewUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/NewUsers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Types/CreateUserDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Types/CreateUserDto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Types/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,11 @@
       <workItem from="1715883060603" duration="61000" />
       <workItem from="1715943228184" duration="5390000" />
       <workItem from="1716196248106" duration="5464000" />
-      <workItem from="1716282777970" duration="4601000" />
+      <workItem from="1716282777970" duration="4602000" />
+      <workItem from="1716367494950" duration="1442000" />
+      <workItem from="1716456072611" duration="705000" />
+      <workItem from="1716542955632" duration="629000" />
+      <workItem from="1716717804097" duration="614000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,14 @@ const Navbar = () => {
     const { isLoggedIn, handleLogout } = useAuth();
     const [userRole, setUserRole] = useState(null);
 
+    const handleScroll = (id) => {
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 0);
+    };
 
     return (
         <nav className="navbar">
@@ -16,13 +24,13 @@ const Navbar = () => {
                     <Link to="/">Your Logo</Link>
                 </div>
                 <div className="navbar-buttons">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
+                    <Link to="/"onClick={() => handleScroll('home')}>Home</Link>
+                    <Link to="/" onClick={() => handleScroll('about')}>About</Link>
                     {isLoggedIn && <Link to="/animals">Table with animals</Link>}
                     <RolesCheck roles={['ADMIN']}>
                         <Link to="/users">Table with users</Link>
                     </RolesCheck>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/" onClick={() => handleScroll('contact')}>Contact</Link>
                 </div>
                 <div className="navbar-auth">
                     {isLoggedIn ? (

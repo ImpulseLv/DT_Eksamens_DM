@@ -11,6 +11,7 @@ import {
 import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterMoment} from "@mui/x-date-pickers/AdapterMoment";
 import {AuthProvider} from "./Pages/LoginAndRegister/AuthContext";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

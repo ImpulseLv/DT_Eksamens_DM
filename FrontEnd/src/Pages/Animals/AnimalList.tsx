@@ -8,6 +8,7 @@ import { TableColumn } from "react-data-table-component/dist/src/DataTable/types
 import Button from '@mui/material/Button';
 import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
+import Footer from "../MainPage/Footer";
 import {Role} from "../../Types/Role";
 
 const baseURL = "http://localhost:8080/animals";
@@ -113,6 +114,7 @@ export function MyComponent() {
                     />
                 </div>
             </form>
+            <Footer />
         </>
     );
 }
