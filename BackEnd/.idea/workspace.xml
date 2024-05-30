@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e78b-cfbc-4443-b172-f58f1537887d" name="Changes" comment="Pievienota metode lai dabūt informāciju par esošo lietotāju">
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/ContactPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/ImageList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/AnimalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/configurations/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/configurations/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/AnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/AnimalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/entity/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/AboutPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Axios/AxiosConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Axios/AxiosConfig.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +49,21 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DT_Eksamens_DM/FrontEnd&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DT_Eksamens_DM/BackEnd/demo/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DT_Eksamens_DM\BackEnd\demo\src\main\resources" />
+      <recent name="D:\DT_Eksamens_DM\BackEnd\demo\src\main\resources\static" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="AuthUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="utility.AuthUtils" />
@@ -74,12 +79,17 @@
       </method>
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AuthUtils" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.AuthUtils" />
@@ -129,6 +139,10 @@
       <workItem from="1716456072611" duration="705000" />
       <workItem from="1716542955632" duration="629000" />
       <workItem from="1716717804097" duration="614000" />
+      <workItem from="1716801899205" duration="4316000" />
+      <workItem from="1716886512373" duration="7530000" />
+      <workItem from="1716974284768" duration="7510000" />
+      <workItem from="1717058625741" duration="1401000" />
     </task>
     <servers />
   </component>

@@ -184,6 +184,7 @@ footer {
   background: linear-gradient(to right, grey, darkgrey);
   color: white;
   font-family: Arial, sans-serif;
+  height: 320px;
 }
 
 footer .section {
@@ -240,4 +241,33 @@ footer .contact-item i {
 footer .footer-bottom {
   text-align: center;
   padding-top: 20px;
+}
+
+.image-thumbnail {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.image-thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1;
 }
