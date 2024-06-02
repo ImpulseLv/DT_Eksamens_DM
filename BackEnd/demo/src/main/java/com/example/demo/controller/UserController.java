@@ -37,7 +37,8 @@ public class UserController {
     @Transactional
     @PostMapping("/newUsers")
     public ResponseEntity<String> createUser(@RequestBody CreateUserDto dto) {
-        Role role = roleService.findOrCreateRole(dto.getRoles().toString());
+        String roleName = dto.getRoles() == null || dto.getRoles().isEmpty()?"USER":dto.getRoles();
+        Role role = roleService.findOrCreateRole(roleName);
         User user = new User();
         user.setUsername(dto.getUsername());
         user.setPassword(dto.getPassword());

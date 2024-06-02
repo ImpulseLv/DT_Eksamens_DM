@@ -40,7 +40,6 @@ public class AnimalService {
 
         return animals;
     }
-//TODO Сделать функцию которая будет находить все картинки животных, и назначать в ArrayList<String> images
 public List<String> getAllAnimalImages() {
     List<String> images = new ArrayList<>();
     try (Stream<Path> paths = Files.walk(Paths.get(IMAGES_PATH))) {

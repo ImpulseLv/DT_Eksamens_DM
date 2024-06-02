@@ -5,19 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94e5344e-7a81-46d9-9b4a-cffea6552c73" name="Changes" comment="Jauno lapu izveidošana">
-      <change afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/Service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/Service/AnimalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/configurations/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/configurations/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/AnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/AnimalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/entity/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalEditForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/NewAnimals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/NewAnimals.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Axios/AxiosConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Axios/AxiosConfig.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LoginAndRegister/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginAndRegister/AuthContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Registration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MainPage/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Users/NewUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/NewUsers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Users/UserEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/UserEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Users/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/UserList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +186,11 @@
       <workItem from="1716886530504" duration="4563000" />
       <workItem from="1716973720307" duration="1856000" />
       <workItem from="1717060157065" duration="1416000" />
+      <workItem from="1717152305765" duration="998000" />
+      <workItem from="1717155713755" duration="3605000" />
+      <workItem from="1717165106016" duration="1879000" />
+      <workItem from="1717240201664" duration="1318000" />
+      <workItem from="1717324817105" duration="1867000" />
     </task>
     <servers />
   </component>

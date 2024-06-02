@@ -5,7 +5,7 @@ import {AbstractAnimalForm} from "./Components/AbstractAnimalForm";
 import axios from "../Axios/AxiosConfig"
 import moment from "moment";
 import Navbar from "../MainPage/Navbar";
-const baseURL = "http://localhost:8080/animals";
+const baseURL = "/animals";
 
 export const NewAnimals: React.FC = () => {
     const navigate = useNavigate();

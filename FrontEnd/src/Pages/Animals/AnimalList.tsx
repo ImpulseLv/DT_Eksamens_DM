@@ -18,7 +18,6 @@ import { Role } from "../../Types/Role";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
-const baseURL = "http://localhost:8080/animals";
 
 export function MyComponent() {
     const [animals, setAnimals] = useState<Animal[]>([]);
@@ -28,7 +27,7 @@ export function MyComponent() {
     const [images, setImages] = useState<File[]>([]);
 
     useEffect(() => {
-        axios.get<Role>("http://localhost:8080/roles/currentRole")
+        axios.get<Role>("/roles/currentRole")
             .then(response => {
                 setUserRole(response.data);
             })
@@ -36,7 +35,7 @@ export function MyComponent() {
                 console.error("Error fetching user role:", error);
             });
 
-        axios.get<Animal[]>(baseURL)
+        axios.get<Animal[]>('/animals')
             .then((response) => {
                 setAnimals(response.data);
             })
@@ -76,7 +75,7 @@ export function MyComponent() {
             formData.append("files", image);
         });
 
-        axios.post(`http://localhost:8080/animals/${selectedAnimal.id}/uploadImages`, formData, {
+        axios.post(`/animals/${selectedAnimal.id}/uploadImages`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },

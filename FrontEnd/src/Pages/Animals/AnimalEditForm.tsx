@@ -6,7 +6,7 @@ import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
 
 export const AnimalEditForm: React.FC = () => {
-    const baseURL = "http://localhost:8080/animals";
+    const baseURL = "/animals";
     const navigate = useNavigate();
     const { id } = useParams();
     const [initialValues, setInitialValues] = useState<Animal | null>(null);

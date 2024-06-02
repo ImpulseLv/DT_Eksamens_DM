@@ -6,7 +6,7 @@ import Navbar from "../MainPage/Navbar";
 import { AbstractUserForm } from "./Components/AbstractUserForm";
 
 export const UserEditForm: React.FC = () => {
-    const baseURL = "http://localhost:8080/users";
+    const baseURL = "/users";
     const navigate = useNavigate();
     const { id } = useParams();
     const [initialValues, setInitialValues] = useState<User | null>(null);

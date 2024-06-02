@@ -1,9 +1,9 @@
 import axios, {AxiosRequestConfig} from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 axios.defaults.withCredentials = true;
-
+console.log("api url", process.env.REACT_APP_API_URL)
 axios.interceptors.request.use(
     (config) => {
         const contentType = config.headers['Content-Type'];

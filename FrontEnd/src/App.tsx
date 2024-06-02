@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {MyComponent} from "./Pages/Animals/AnimalList";
 import React from "react";
 import {AnimalEditForm} from "./Pages/Animals/AnimalEditForm";
@@ -11,8 +11,10 @@ import {NewUsers} from "./Pages/Users/NewUsers";
 import {RolesCheck} from "./Pages/Users/Components/RolesCheck";
 import {UserEditForm} from "./Pages/Users/UserEditForm";
 import AboutPage from "./Pages/MainPage/AboutPage";
+import Footer from "./Pages/MainPage/Footer";
 
 export const router = createBrowserRouter([
+
     {
         path: "/",
         element: <MainPage/>
@@ -54,5 +56,16 @@ export const router = createBrowserRouter([
       element:<UserEditForm/>
     },
 ]);
+
+const App = () => (
+    <div id="root">
+        <div className="main-content">
+            <RouterProvider router={router} />
+        </div>
+        <Footer />
+    </div>
+);
+
+export default App;
 
 

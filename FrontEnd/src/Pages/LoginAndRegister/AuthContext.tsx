@@ -38,7 +38,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
         useEffect(() => {
             if (isLoggedIn) {
-                axios.get("http://localhost:8080/roles/currentRole")
+                axios.get("/roles/currentRole")
                     .then(response => {
                         setUserRole(response.data.name);
                         console.log("User role:", response.data.name);

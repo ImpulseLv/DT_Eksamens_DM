@@ -7,7 +7,7 @@ import {AbstractUserForm} from "./Components/AbstractUserForm";
 import {CreateUserDto} from "../../Types/CreateUserDto";
 
 
-const baseURL = "http://localhost:8080/users";
+
 
 export const NewUsers: React.FC = () => {
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ export const NewUsers: React.FC = () => {
     const handleFormSubmit = (values: User) => {
         setIsLoading(true);
         console.log("Submitted values:", values);
-        axios.post(baseURL + "/newUsers", values)
+        axios.post( "/newUsers", values)
             .then((response) => {
                 console.log('The data has been successfully sent to the server :', response.data);
                 navigate("/users");

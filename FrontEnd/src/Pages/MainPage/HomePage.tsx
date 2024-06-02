@@ -9,7 +9,7 @@ const HomePage = () => {
 
     useEffect(() => {
         // Fetch all users and count them
-        axios.get('http://localhost:8080/users/allUsers')
+        axios.get('/users/allUsers')
             .then(response => {
                 setNumUsers(response.data.length);
             })
@@ -18,7 +18,7 @@ const HomePage = () => {
             });
 
         // Fetch all animals and count them
-        axios.get('http://localhost:8080/animals')
+        axios.get('/animals')
             .then(response => {
                 setNumAnimals(response.data.length);
             })

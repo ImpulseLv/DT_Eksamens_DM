@@ -7,14 +7,14 @@ import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
 import Footer from "../MainPage/Footer";
 
-const baseURL = "http://localhost:8080/users";
+const baseURL = "/users";
 
 export function UserComponent() {
     const [users, setUsers] = useState<any[]>([]);
     const [userRole, setUserRole] = useState<any>(null);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/roles/currentRole")
+        axios.get("/roles/currentRole")
             .then(response => {
                 setUserRole(response.data);
             })
