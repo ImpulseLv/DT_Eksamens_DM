@@ -73,8 +73,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User not found or could not be deleted");
         }
     }
-
-    //@todo refactoring part of GET:/users
+    
     @PreAuthorize("hasAnyRole('ADMIN', 'MODERATOR')")
     @GetMapping("/users/greaterThan/{idMin}")
     public ResponseEntity<List<User>> getUsersWithIdGreaterThan(@PathVariable Long idMin) {

@@ -22,21 +22,8 @@ code {
 
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.main-content {
-  flex: 1;
-}
-
 html , body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  min-height: 100%;
 }
 
 body {
@@ -166,6 +153,7 @@ h3 {
 .image {
   flex: 1;
   padding: 20px;
+
 }
 
 .image img {
@@ -284,4 +272,28 @@ footer .footer-bottom {
   align-items: center;
   font-size: 16px;
   line-height: 1;
+}
+.modal-container {
+  width: 300px;
+  background-color: #ffffff;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.modal-description {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.modal-button + .modal-button {
+  margin-left: 8px;
 }

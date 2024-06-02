@@ -17,6 +17,7 @@ import Footer from "../MainPage/Footer";
 import { Role } from "../../Types/Role";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import {message} from "antd";
 
 
 export function MyComponent() {
@@ -25,6 +26,8 @@ export function MyComponent() {
     const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null);
     const [open, setOpen] = useState(false);
     const [images, setImages] = useState<File[]>([]);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [messageApi, contextHolder] = message.useMessage();
 
     useEffect(() => {
         axios.get<Role>("/roles/currentRole")
@@ -43,6 +46,13 @@ export function MyComponent() {
                 console.error("Error fetching data:", error);
             });
     }, []);
+
+    useEffect(() => {
+        if (isSuccess) {
+            messageApi.success("Bilde veiksmīgi pievienota!");
+            setIsSuccess(false);
+        }
+    }, [isSuccess, messageApi]);
 
     const handleClickOpen = (animal: Animal) => {
         setSelectedAnimal(animal);
@@ -82,6 +92,7 @@ export function MyComponent() {
         })
             .then(response => {
                 console.log("Images uploaded successfully");
+                setIsSuccess(true);
                 handleClose();
             })
             .catch(error => {
@@ -160,6 +171,7 @@ export function MyComponent() {
 
     return (
         <>
+            {contextHolder}
             <Navbar />
             <form>
                 <div className="animalListBlock">
@@ -176,7 +188,7 @@ export function MyComponent() {
             </form>
             <Footer />
 
-            <Dialog  open={open} onClose={handleClose}>
+            <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload Images</DialogTitle>
                 <DialogContent>
                     <input

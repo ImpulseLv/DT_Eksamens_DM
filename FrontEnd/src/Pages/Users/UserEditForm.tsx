@@ -4,16 +4,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "../Axios/AxiosConfig";
 import Navbar from "../MainPage/Navbar";
 import { AbstractUserForm } from "./Components/AbstractUserForm";
+import { message } from "antd";
 
 export const UserEditForm: React.FC = () => {
-    const baseURL = "/users";
+    const baseURL = "/users/users";
     const navigate = useNavigate();
     const { id } = useParams();
     const [initialValues, setInitialValues] = useState<User | null>(null);
 
     const getUserById = (id: string) => {
         axios
-            .get(`${baseURL}/users/${id}`)
+            .get(`${baseURL}/${id}`)
             .then((response) => {
                 response.data.password = "";
                 response.data.roles = response.data.roles[0].name;
@@ -37,15 +38,16 @@ export const UserEditForm: React.FC = () => {
         console.log("Submitted values:", values);
         const idToUpdate = id!;
 
-
         axios
-            .put(`${baseURL}/users/${idToUpdate}`, values)
+            .put(`${baseURL}/${idToUpdate}`, values)
             .then((response) => {
                 console.log("The data has been successfully sent to the server :", response.data);
+                message.success("Lietotājs veiksmīgi atjaunots!");
                 navigate("/users");
             })
             .catch((error) => {
                 console.error("Error sending data :", error);
+                message.error("Kļūda, dati netika veiksmīgi atjaunoti!");
             })
             .finally(() => {
                 setIsLoading(false);

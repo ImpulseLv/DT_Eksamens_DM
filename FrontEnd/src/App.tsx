@@ -57,15 +57,4 @@ export const router = createBrowserRouter([
     },
 ]);
 
-const App = () => (
-    <div id="root">
-        <div className="main-content">
-            <RouterProvider router={router} />
-        </div>
-        <Footer />
-    </div>
-);
-
-export default App;
-
 
