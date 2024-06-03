@@ -10,15 +10,16 @@ import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
-import TextField from '@mui/material/TextField';
 import axios from "../Axios/AxiosConfig";
 import Navbar from "../MainPage/Navbar";
 import Footer from "../MainPage/Footer";
 import { Role } from "../../Types/Role";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import {message} from "antd";
-
+import EditIcon from '@mui/icons-material/Edit';
+import ImageIcon from '@mui/icons-material/Image';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { message } from "antd";
 
 export function MyComponent() {
     const [animals, setAnimals] = useState<Animal[]>([]);
@@ -27,6 +28,8 @@ export function MyComponent() {
     const [open, setOpen] = useState(false);
     const [images, setImages] = useState<File[]>([]);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+    const [animalToDelete, setAnimalToDelete] = useState<Animal | null>(null);
     const [messageApi, contextHolder] = message.useMessage();
 
     useEffect(() => {
@@ -49,7 +52,7 @@ export function MyComponent() {
 
     useEffect(() => {
         if (isSuccess) {
-            messageApi.success("Bilde veiksmīgi pievienota!");
+            messageApi.success("Images uploaded successfully!");
             setIsSuccess(false);
         }
     }, [isSuccess, messageApi]);
@@ -100,45 +103,72 @@ export function MyComponent() {
             });
     };
 
+    const handleModalOpen = (animal: Animal) => {
+        setAnimalToDelete(animal);
+        setDeleteDialogOpen(true);
+    };
+
+    const handleDeleteClose = () => {
+        setDeleteDialogOpen(false);
+        setAnimalToDelete(null);
+    };
+
+    const handleDelete = () => {
+        if (animalToDelete) {
+            axios.delete(`/animals/${animalToDelete.id}`)
+                .then(response => {
+                    console.log("Animal deleted successfully");
+                    setAnimals(prevAnimals => prevAnimals.filter(animal => animal.id !== animalToDelete.id));
+                    setDeleteDialogOpen(false);
+                    message.success("Animal deleted successfully!");
+                })
+                .catch(error => {
+                    console.error("Error deleting animal:", error);
+                    message.error("Error deleting animal!");
+                });
+        }
+    };
+
     const columns: TableColumn<Animal>[] = [
         {
             name: 'ID',
-            cell: (row: Animal) => row.id,
+            selector: (row: Animal) => row.id,
             sortable: true,
         },
         {
             name: 'Name',
-            cell: (row: Animal) => row.name,
+            selector: (row: Animal) => row.name,
             sortable: true,
         },
         {
             name: 'Type',
-            cell: (row: Animal) => row.type,
+            selector: (row: Animal) => row.type,
             sortable: true,
         },
         {
             name: 'Status',
+            selector: (row: Animal) => row.statuss,
             cell: (row: Animal) => <AnimalStatusLabel status={row.statuss} />,
             sortable: true,
         },
         {
             name: 'Date Of Birth',
-            cell: (row: Animal) => row.date_of_birth,
+            selector: (row: Animal) => moment(row.date_of_birth).format('YYYY-MM-DD'),
             sortable: true,
         },
         {
             name: 'Gender',
-            cell: (row: Animal) => row.gender,
+            selector: (row: Animal) => row.gender,
             sortable: true,
         },
         {
             name: 'Creation Date',
-            cell: (row: Animal) => moment(row.creation_date).format('YYYY-MM-DD'),
+            selector: (row: Animal) => moment(row.creation_date).format('YYYY-MM-DD'),
             sortable: true,
         },
         {
             name: 'Update Date',
-            cell: (row: Animal) => moment(row.update_date).format('YYYY-MM-DD'),
+            selector: (row: Animal) => moment(row.update_date).format('YYYY-MM-DD'),
             sortable: true,
         },
         {
@@ -147,21 +177,19 @@ export function MyComponent() {
                 return (
                     <>
                         {userRole && userRole.name !== "USER" && (
-                            <Link to={'/animals/' + row.id}>
-                                <Button variant="outlined">Edit</Button>
-                            </Link>
-                        )}
-                    </>
-                );
-            }
-        },
-        {
-            name: '',
-            cell: (row: Animal) => {
-                return (
-                    <>
-                        {userRole && userRole.name !== "USER" && (
-                            <Button variant="outlined" onClick={() => handleClickOpen(row)}>Images</Button>
+                            <>
+                                <Link to={'/animals/' + row.id}>
+                                    <IconButton>
+                                        <EditIcon style={{color: 'steelblue'}}/>
+                                    </IconButton>
+                                </Link>
+                                <IconButton onClick={() => handleClickOpen(row)}>
+                                    <ImageIcon style={{color: 'steelblue'}}/>
+                                </IconButton>
+                                <IconButton onClick={() => handleModalOpen(row)}>
+                                    <DeleteIcon style={{color: 'steelblue'}}/>
+                                </IconButton>
+                            </>
                         )}
                     </>
                 );
@@ -223,6 +251,18 @@ export function MyComponent() {
                     <Button onClick={handleUpload} color="primary" variant="contained">
                         Upload
                     </Button>
+                </DialogActions>
+            </Dialog>
+
+            <Dialog
+                open={deleteDialogOpen}
+                onClose={handleDeleteClose}
+            >
+                <DialogTitle>Delete Animal</DialogTitle>
+                <DialogContent>Are you sure you want to delete this animal?</DialogContent>
+                <DialogActions>
+                    <Button onClick={handleDeleteClose} color="primary">No</Button>
+                    <Button onClick={handleDelete} color="primary" variant="contained">Yes</Button>
                 </DialogActions>
             </Dialog>
         </>

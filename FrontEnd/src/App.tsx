@@ -12,6 +12,7 @@ import {RolesCheck} from "./Pages/Users/Components/RolesCheck";
 import {UserEditForm} from "./Pages/Users/UserEditForm";
 import AboutPage from "./Pages/MainPage/AboutPage";
 import Footer from "./Pages/MainPage/Footer";
+import AnimalCard from "./Pages/Animals/AnimalCard";
 
 export const router = createBrowserRouter([
 
@@ -32,8 +33,12 @@ export const router = createBrowserRouter([
         element: <Login/>,
     },
     {
+      path: "animalCard",
+      element: <AnimalCard/>
+    },
+    {
         path: "animals",
-        element: <RolesCheck roles={['USER', 'ADMIN', 'MODERATOR']}><MyComponent/></RolesCheck>,
+        element: <RolesCheck roles={['ADMIN', 'MODERATOR']}><MyComponent/></RolesCheck>,
     },
     {
         path: "animals/:id",

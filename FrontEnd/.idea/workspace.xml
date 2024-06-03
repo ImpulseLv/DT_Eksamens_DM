@@ -6,22 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="94e5344e-7a81-46d9-9b4a-cffea6552c73" name="Changes" comment="Jauno lapu izveidošana">
       <change beforePath="$PROJECT_DIR$/../BackEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalEditForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/NewAnimals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/NewAnimals.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Registration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MainPage/AboutPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Users/NewUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/NewUsers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Users/UserEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/UserEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/ContactPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MainPage/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Users/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/UserList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/aboutUs.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/aboutUs.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/helpImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/helpImage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +178,10 @@
       <workItem from="1717165106016" duration="1879000" />
       <workItem from="1717240201664" duration="1318000" />
       <workItem from="1717324817105" duration="4765000" />
-      <workItem from="1717353648880" duration="8332000" />
+      <workItem from="1717353648880" duration="8636000" />
+      <workItem from="1717370610369" duration="1082000" />
+      <workItem from="1717371708278" duration="3477000" />
+      <workItem from="1717375636670" duration="6006000" />
     </task>
     <servers />
   </component>

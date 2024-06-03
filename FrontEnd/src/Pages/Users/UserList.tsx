@@ -5,8 +5,14 @@ import Button from '@mui/material/Button';
 import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
 import Footer from "../MainPage/Footer";
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
+import {message} from "antd";
+import IconButton from "@mui/material/IconButton";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const baseURL = "/users";
 
@@ -14,7 +20,8 @@ export function UserComponent() {
     const [users, setUsers] = useState<any[]>([]);
     const [userRole, setUserRole] = useState<any>(null);
     const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
-    const [modalOpen, setModalOpen] = useState<boolean>(false);
+    const [deleteDialogOpen, setDeleteDialogOpen] = useState<boolean>(false);
+    const [messageApi, contextHolder] = message.useMessage();
 
     useEffect(() => {
         axios.get("/roles/currentRole")
@@ -40,21 +47,23 @@ export function UserComponent() {
                 .then(response => {
                     console.log(response.data);
                     setUsers(users.filter(user => user.id !== selectedUserId));
-                    setModalOpen(false);
+                    setDeleteDialogOpen(false);
+                    messageApi.success("User deleted successfully!");
                 })
                 .catch(error => {
                     console.error("Error deleting user:", error);
+                    messageApi.error("Error deleting user!");
                 });
         }
     };
 
-    const handleModalOpen = (userId: number) => {
+    const handleDeleteOpen = (userId: number) => {
         setSelectedUserId(userId);
-        setModalOpen(true);
+        setDeleteDialogOpen(true);
     };
 
-    const handleModalClose = () => {
-        setModalOpen(false);
+    const handleDeleteClose = () => {
+        setDeleteDialogOpen(false);
     };
 
     const columns = [
@@ -86,9 +95,13 @@ export function UserComponent() {
                         {userRole && userRole.name !== "USER" && (
                             <>
                                 <Link to={`/users/${row.id}`}>
-                                    <Button variant="outlined" style={{marginRight: 8}}>Edit</Button>
+                                    <IconButton>
+                                        <EditIcon style={{color: 'steelblue'}}/>
+                                    </IconButton>
                                 </Link>
-                                <Button variant="outlined" onClick={() => handleModalOpen(row.id)}>Delete</Button>
+                                <IconButton onClick={() => handleDeleteOpen(row.id)}>
+                                    <DeleteIcon style={{color: 'steelblue'}}/>
+                                </IconButton>
                             </>
                         )}
                     </>
@@ -99,6 +112,7 @@ export function UserComponent() {
 
     return (
         <>
+            {contextHolder}
             <Navbar />
             <div className="animalListBlock">
                 {userRole && userRole.name !== "USER" && (
@@ -110,19 +124,17 @@ export function UserComponent() {
                     columns={columns}
                     data={users}
                 />
-                <Modal
-                    open={modalOpen}
-                    onClose={handleModalClose}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
+                <Dialog
+                    open={deleteDialogOpen}
+                    onClose={handleDeleteClose}
                 >
-                    <div className="modal-container">
-                        <h2 className="modal-title" id="modal-modal-title">Delete User</h2>
-                        <p className="modal-description" id="modal-modal-description">Are you sure you want to delete this user?</p>
-                        <Button className="modal-button" variant="outlined"  onClick={handleDelete}>Yes</Button>
-                        <Button className="modal-button" variant="outlined"  onClick={handleModalClose}>No</Button>
-                    </div>
-                </Modal>
+                    <DialogTitle>Delete User</DialogTitle>
+                    <DialogContent>Are you sure you want to delete this user?</DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleDeleteClose} color="primary">No</Button>
+                        <Button onClick={handleDelete} color="primary" variant="contained">Yes</Button>
+                    </DialogActions>
+                </Dialog>
             </div>
             <Footer />
         </>

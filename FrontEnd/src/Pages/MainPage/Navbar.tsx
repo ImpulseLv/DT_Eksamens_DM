@@ -30,6 +30,9 @@ const Navbar = () => {
                     <RolesCheck roles={['ADMIN']}>
                         <Link to="/users">Table with users</Link>
                     </RolesCheck>
+                    <RolesCheck roles={["USER", "ADMIN", "MODERATOR"]}>
+                        <Link to="/animalCard">Animals</Link>
+                    </RolesCheck>
                     <Link to="/" onClick={() => handleScroll('contact')}>Contact</Link>
                 </div>
                 <div className="navbar-auth">
