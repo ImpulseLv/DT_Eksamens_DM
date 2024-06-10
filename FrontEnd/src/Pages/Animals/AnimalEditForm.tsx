@@ -34,7 +34,7 @@ export const AnimalEditForm: React.FC = () => {
 
     useEffect(() => {
         if (isSuccess) {
-            messageApi.success('Dzīvnieka dati veiksmīgi rediģēti!');
+            messageApi.success('Animal data successfully edited!');
             setTimeout(() => {
                 navigate("/animals");
             }, 2000);

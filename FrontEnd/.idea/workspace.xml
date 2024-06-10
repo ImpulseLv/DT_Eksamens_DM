@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94e5344e-7a81-46d9-9b4a-cffea6552c73" name="Changes" comment="Jauno lapu izveidošana">
+      <change afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/dto/ChangePasswordDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/Service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/Service/AnimalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/AnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/AnimalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.f1a68ed5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.f1a68ed5.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.f1a68ed5.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/ContactPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/AnimalEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/AnimalEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Animals/NewAnimals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Animals/NewAnimals.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginAndRegister/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MainPage/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Users/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/UserList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Users/NewUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/NewUsers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Users/UserEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Users/UserEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kvalifikacijas_Eksamens_DT.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Kvalifikacijas_Eksamens_DT.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +195,12 @@
       <workItem from="1717353648880" duration="8636000" />
       <workItem from="1717370610369" duration="1082000" />
       <workItem from="1717371708278" duration="3477000" />
-      <workItem from="1717375636670" duration="6006000" />
+      <workItem from="1717375636670" duration="6952000" />
+      <workItem from="1717493367332" duration="15514000" />
+      <workItem from="1717583203029" duration="8114000" />
+      <workItem from="1717609129707" duration="1328000" />
+      <workItem from="1717683236217" duration="2452000" />
+      <workItem from="1717748334065" duration="3986000" />
     </task>
     <servers />
   </component>

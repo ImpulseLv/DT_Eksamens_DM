@@ -1,6 +1,7 @@
 package com.example.demo.Service;
 
 
+import com.example.demo.dto.ChangePasswordDto;
 import com.example.demo.dto.CreateUserDto;
 import com.example.demo.entity.Role;
 import com.example.demo.entity.User;
@@ -32,16 +33,16 @@ public class UserService implements UserDetailsService {
     @Autowired
     private RoleService roleService;
 
-@Transactional
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
+    @Transactional
+        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+            User user = userRepository.findByUsername(username);
 
-        if (user == null) {
-            throw new UsernameNotFoundException("User not found");
+            if (user == null) {
+                throw new UsernameNotFoundException("User not found");
+            }
+
+            return user;
         }
-
-        return user;
-    }
 
     public User findUserById(Long userId) {
         Optional<User> userFromDb = userRepository.findById(userId);
@@ -105,4 +106,16 @@ public class UserService implements UserDetailsService {
         return true;
     }
 
+    public boolean changePassword(Long userId, ChangePasswordDto dto) {
+        if (!dto.getNewPassword().equals(dto.getConfirmPassword())) {
+            return false;
+        }
+
+        return userRepository.findById(userId).map(user -> {
+            user.setPassword(bCryptPasswordEncoder.encode(dto.getNewPassword()));
+            userRepository.save(user);
+            return true;
+        }).orElse(false);
+    }
 }
+

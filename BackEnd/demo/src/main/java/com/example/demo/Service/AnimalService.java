@@ -3,6 +3,7 @@ package com.example.demo.Service;
 import com.example.demo.entity.Animal;
 import com.example.demo.repository.AnimalRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -25,8 +26,8 @@ public class AnimalService {
             return Optional.of(animalRepository.save(animal));
     }
 
-    public List<Animal> getAllAnimals() {
-        List<Animal> animals = animalRepository.findAll();
+    public List<Animal> getAllAnimals(Sort sort) {
+        List<Animal> animals = animalRepository.findAll(sort);
         List<String> images = getAllAnimalImages();
 
         // Группируем изображения по животным. Здесь предполагается, что изображения названы в формате "<animalId>_<imageNumber>.jpg"

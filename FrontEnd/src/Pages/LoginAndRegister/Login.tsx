@@ -9,6 +9,7 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState(false);
     const { handleLogin: contextHandleLogin } = useAuth();
     const navigate = useNavigate();
 
@@ -18,6 +19,7 @@ const Login = () => {
             navigate('/');
         }
     }, [navigate]);
+
     const handleLogin = async () => {
         try {
             const response = await axios.post('/login', {
@@ -27,17 +29,21 @@ const Login = () => {
 
             if (response.status === 200) {
                 console.log('Login successful!');
+                setSuccess(true);
                 setError('');
-
                 localStorage.setItem('isLoggedIn', 'true');
-
                 navigate('/');
                 contextHandleLogin();
             } else {
-                setError('Invalid username or password');
+                setError('Login successful!');
             }
         } catch (error) {
             console.error('Error logging in:', error);
+            if (error.response && error.response.status === 401) {
+                setError('Wrong password or username!');
+            } else {
+                setError('An error occurred. Please try again later.');
+            }
         }
     };
 

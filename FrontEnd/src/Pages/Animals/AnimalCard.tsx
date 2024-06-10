@@ -102,23 +102,35 @@ const AnimalCard = ({ animal }) => {
 
 const AnimalCards = () => {
     const [animals, setAnimals] = useState([]);
+    const [sortedBy, setSortedBy] = useState('creation_date,desc');
 
     useEffect(() => {
-        axios.get('/animals')
+        axios.get('/animals?sort='+sortedBy)
             .then(response => {
                 setAnimals(response.data);
             })
             .catch(error => {
                 console.error("Error fetching data:", error);
             });
-    }, []);
+    }, [sortedBy]);
 
     const classes = useStyles();
+
 
     return (
         <>
             <Navbar />
             <div className={classes.animalCardContainer}>
+                <Card className={classes.card}>
+                    <CardContent>
+                        <div>
+                            <Button onClick={() => setSortedBy("name")}>Sort by Name</Button>
+                            <Button onClick={() => setSortedBy("type")}>Sort by Type</Button>
+                            <Button onClick={() => setSortedBy("gender")}>Sort by Gender</Button>
+                             {/*sortedBy && <Button onClick={setSortedBy('creation-date,desc')}>Reset Sort</Button>*/}
+                        </div>
+                    </CardContent>
+                </Card>
                 {animals.map(animal => (
                     <AnimalCard key={animal.id} animal={animal} />
                 ))}

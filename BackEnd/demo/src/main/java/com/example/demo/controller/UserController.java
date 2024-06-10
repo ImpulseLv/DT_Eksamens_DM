@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.Service.RoleService;
 import com.example.demo.Service.UserService;
+import com.example.demo.dto.ChangePasswordDto;
 import com.example.demo.dto.CreateUserDto;
 import com.example.demo.dto.UsersFilter;
 import com.example.demo.entity.Role;
@@ -11,6 +12,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -92,4 +96,27 @@ public class UserController {
         }
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'MODERATOR', 'USER')")
+    @PutMapping("/users/{userId}/change-password")
+    public ResponseEntity<String> changePassword(@PathVariable Long userId, @RequestBody ChangePasswordDto dto) {
+        boolean updated = userService.changePassword(userId, dto);
+        if (updated) {
+            return ResponseEntity.ok("Password updated successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found or password update failed");
+        }
+    }
+
+    @GetMapping("/current")
+    public ResponseEntity<User> getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = authentication.getName();
+
+        try {
+            User currentUser = (User) userService.loadUserByUsername(currentUsername);
+            return ResponseEntity.ok(currentUser);
+        } catch (UsernameNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
 }

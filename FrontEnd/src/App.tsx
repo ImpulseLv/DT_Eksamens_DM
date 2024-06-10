@@ -13,12 +13,17 @@ import {UserEditForm} from "./Pages/Users/UserEditForm";
 import AboutPage from "./Pages/MainPage/AboutPage";
 import Footer from "./Pages/MainPage/Footer";
 import AnimalCard from "./Pages/Animals/AnimalCard";
+import Profile from "./Pages/Users/Profile";
 
 export const router = createBrowserRouter([
 
     {
         path: "/",
         element: <MainPage/>
+    },
+    {
+      path: "/profile",
+      element: <Profile/>
     },
     {
       path: "/",

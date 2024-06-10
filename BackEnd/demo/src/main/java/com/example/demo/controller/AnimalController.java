@@ -4,6 +4,7 @@ import com.example.demo.Service.AnimalService;
 import com.example.demo.entity.Animal;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -21,6 +23,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Stream;
 
 @RestController
@@ -43,8 +46,8 @@ public class AnimalController {
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping
-    public ResponseEntity<List<Animal>> getAllAnimals() {
-        List<Animal> animals = animalService.getAllAnimals();
+    public ResponseEntity<List<Animal>> getAllAnimals(Sort sort) {
+        List<Animal> animals = animalService.getAllAnimals(sort);
         return ResponseEntity.ok(animals);
     }
     @PreAuthorize("hasAnyRole('ADMIN', 'MODERATOR')")
@@ -74,13 +77,20 @@ public class AnimalController {
             @PathVariable Long animalId,
             @RequestParam("files") MultipartFile[] files
     ) {
+        // Проверяем, существует ли директория для загрузки изображений, если нет - создаем
+        File directory = new File(uploadDir);
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
         for (MultipartFile file : files) {
             try {
+                // Генерируем уникальное имя файла
+                String filename = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
+                // Сохраняем файл на сервере
                 byte[] bytes = file.getBytes();
-                String extension = getFileExtension(file.getOriginalFilename());
-                int imageNumber = getNextImageNumber(animalId, extension);
-                String filename = animalId + "_" + imageNumber + "." + extension;
-                writeToFile(animalId, filename, bytes);
+                Path filePath = Paths.get(uploadDir, filename);
+                Files.write(filePath, bytes);
             } catch (IOException e) {
                 e.printStackTrace();
                 return ResponseEntity.badRequest().body("Failed to upload " + file.getOriginalFilename());
@@ -88,6 +98,7 @@ public class AnimalController {
         }
         return ResponseEntity.ok("Files uploaded successfully");
     }
+
 
     private void writeToFile(Long animalId, String filename, byte[] data) throws IOException {
         Path directoryPath = Paths.get(uploadDir, animalId.toString());

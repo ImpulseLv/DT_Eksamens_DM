@@ -28,7 +28,7 @@ export const NewAnimals: React.FC = () => {
 
     useEffect(() => {
         if (isSuccess) {
-            messageApi.success('Dzīvnieks veiksmīgi pievienots!');
+            messageApi.success('Animal successfully added!');
             setTimeout(() => {
                 navigate("/animals");
             }, 2000);

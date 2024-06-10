@@ -26,7 +26,9 @@ const Navbar = () => {
                 <div className="navbar-buttons">
                     <Link to="/"onClick={() => handleScroll('home')}>Home</Link>
                     <Link to="/" onClick={() => handleScroll('about')}>About</Link>
+                    <RolesCheck roles={['ADMIN', 'MODERATOR']}>
                     {isLoggedIn && <Link to="/animals">Table with animals</Link>}
+                    </RolesCheck>
                     <RolesCheck roles={['ADMIN']}>
                         <Link to="/users">Table with users</Link>
                     </RolesCheck>
@@ -37,7 +39,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-auth">
                     {isLoggedIn ? (
-                        <Link to="/" onClick={handleLogout}>Logout</Link>
+                        <><Link to="/" onClick={handleLogout}>Logout</Link><Link to="/profile">👤 Profile</Link></>
                     ) : (
                         <>
                             <Link to="/login">Login</Link>

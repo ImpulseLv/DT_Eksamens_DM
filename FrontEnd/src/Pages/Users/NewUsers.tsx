@@ -33,12 +33,12 @@ export const NewUsers: React.FC = () => {
             .then((response) => {
                 console.log("The data has been successfully sent to the server :", response.data);
                 setIsLoading(false);
-                message.success("Lietotājs veiksmīgi izveidots!");
+                message.success("User successfully created!");
                 navigate("/users");
             })
             .catch((error) => {
                 setIsLoading(false);
-                message.error("Kļūda, dati netika veiksmīgi nosūtīti!");
+                message.error("Error, data was not sent successfully!");
                 console.error("Error sending data :", error);
             });
     };

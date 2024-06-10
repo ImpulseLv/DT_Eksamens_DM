@@ -42,12 +42,12 @@ export const UserEditForm: React.FC = () => {
             .put(`${baseURL}/${idToUpdate}`, values)
             .then((response) => {
                 console.log("The data has been successfully sent to the server :", response.data);
-                message.success("Lietotājs veiksmīgi atjaunots!");
+                message.success("User successfully restored!");
                 navigate("/users");
             })
             .catch((error) => {
                 console.error("Error sending data :", error);
-                message.error("Kļūda, dati netika veiksmīgi atjaunoti!");
+                message.error("Error, data was not successfully restored!");
             })
             .finally(() => {
                 setIsLoading(false);

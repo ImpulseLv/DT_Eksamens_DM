@@ -297,3 +297,61 @@ footer .footer-bottom {
 .modal-button + .modal-button {
   margin-left: 8px;
 }
+
+.profile-container {
+  height: 100vh;
+  width: 100px;
+}
+
+.profile-paper {
+  margin-left: 20px;
+  margin-top: 60px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+}
+
+.profile-info-paper {
+  margin-top: 60px;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.button-paper {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+}
+
+.profile-title {
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 110px; /* Устанавливаем ширину изображения */
+  height: 120px; /* Устанавливаем высоту изображения */
+  border-radius: 50%; /* Делаем изображение круглым */
+  margin-bottom: 10px; /* Отступ снизу от изображения */
+}
+
+.user-details {
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+.username {
+  margin-bottom: 5px; /* Отступ снизу от имени пользователя */
+}
