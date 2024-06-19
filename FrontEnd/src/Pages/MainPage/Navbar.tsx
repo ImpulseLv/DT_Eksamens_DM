@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from "../LoginAndRegister/AuthContext";
-import axios from "../Axios/AxiosConfig";
 import {RolesCheck} from "../Users/Components/RolesCheck";
+import logo from "../../images/logo.png"
 
 const Navbar = () => {
     const { isLoggedIn, handleLogout } = useAuth();
@@ -21,7 +21,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <Link to="/">Your Logo</Link>
+                    <Link to="/"><img src={logo} style={{ width: '80px', height: '80px' }}></img></Link>
                 </div>
                 <div className="navbar-buttons">
                     <Link to="/"onClick={() => handleScroll('home')}>Home</Link>

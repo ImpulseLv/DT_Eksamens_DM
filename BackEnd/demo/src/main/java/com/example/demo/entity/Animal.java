@@ -1,15 +1,8 @@
 package com.example.demo.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.type.descriptor.jdbc.VarcharJdbcType;
-
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -22,6 +15,7 @@ public class Animal {
     public enum AnimalStatuss{
          free,
          taken,
+         notVerified,
          booked;
 
  }
@@ -35,16 +29,18 @@ public class Animal {
         private AnimalStatuss statuss;
         private Date date_of_birth;
         private String gender;
-        private Date creation_date;
+        private Date creationDate;
         private Date update_date;
         private Long owner_id;
+        private Long price;
+        private Long takenBy;
         @Transient
         private ArrayList<String> images;
 
         @PrePersist
         protected void onCreate() {
-            creation_date = new Date();
-            update_date = creation_date;
+            creationDate = new Date();
+            update_date = creationDate;
         }
         @PreUpdate
         protected void onUpdate(){
@@ -59,5 +55,13 @@ public class Animal {
     public void setImages(ArrayList<String> images) {
         this.images = images;
     }
+
+
+    public AnimalStatuss getStatuss() {
+        return statuss;
     }
 
+    public void setStatuss(AnimalStatuss statuss) {
+        this.statuss = statuss;
+    }
+}

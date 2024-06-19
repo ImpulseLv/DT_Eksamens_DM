@@ -79,7 +79,6 @@ const Profile: React.FC = () => {
                     <Box className="profile-container" style={{ height: 180 }}>
                         <Paper className="button-paper">
                             <Button variant="outlined" color="primary" className="change-password-button" onClick={() => setPasswordDialogOpen(true)}>Change Password</Button>
-                            <Button variant="contained" color="primary" className="change-username-button" style={{ marginTop: 10 }}>Change Username</Button>
                         </Paper>
                     </Box>
                 </Box>

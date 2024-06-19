@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Animal } from "../../Types/Animal";
 import { Link } from "react-router-dom";
 import { AnimalStatusLabel } from "./Components/AnimalStatusLabel";
-import DataTable from 'react-data-table-component';
+import DataTable, {TableColumn} from 'react-data-table-component';
 import moment from "moment";
-import { TableColumn } from "react-data-table-component/dist/src/DataTable/types";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -129,6 +128,26 @@ export function MyComponent() {
         }
     };
 
+    const handleChangeStatus = (animalId: number) => {
+        axios.put(`/animals/${animalId}/status`, null, {
+            params: {
+                status: 'free'
+            }
+        })
+            .then(response => {
+                setAnimals(prevAnimals =>
+                    prevAnimals.map(animal =>
+                        animal.id === animalId ? { ...animal, statuss: 'free' as Animal['statuss'] } : animal
+                    )
+                );
+                message.success("Status updated successfully!");
+            })
+            .catch(error => {
+                console.error("Error updating status:", error);
+                message.error("Error updating status!");
+            });
+    };
+
     const columns: TableColumn<Animal>[] = [
         {
             name: 'ID',
@@ -146,9 +165,26 @@ export function MyComponent() {
             sortable: true,
         },
         {
+          name: "Price",
+          selector: (row: Animal) => row.price + ",00 $",
+          sortable:true,
+        },
+        {
             name: 'Status',
             selector: (row: Animal) => row.statuss,
-            cell: (row: Animal) => <AnimalStatusLabel status={row.statuss} />,
+            cell: (row: Animal) => (
+                <>
+                    <AnimalStatusLabel status={row.statuss} />
+                    {row.statuss === "notVerified" && (
+                        <Button onClick={() => handleChangeStatus(row.id)}>Verify</Button>
+                    )}
+                </>
+            ),
+            sortable: true,
+        },
+        {
+            name: 'Taken by',
+            selector: (row: Animal) => row.statuss === 'free' ? '' : row.takenBy,
             sortable: true,
         },
         {
@@ -163,7 +199,7 @@ export function MyComponent() {
         },
         {
             name: 'Creation Date',
-            selector: (row: Animal) => moment(row.creation_date).format('YYYY-MM-DD'),
+            selector: (row: Animal) => moment(row.creationDate).format('YYYY-MM-DD'),
             sortable: true,
         },
         {

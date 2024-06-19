@@ -2,6 +2,7 @@
 export enum AnimalStatuss {
     free = "free",
     taken = "taken",
+    notVerified = "notVerified",
     booked = "booked"
 }
 
@@ -12,7 +13,9 @@ export interface Animal{
     statuss: AnimalStatuss;
     date_of_birth: string;
     gender: string;
-    creation_date:number;
+    creationDate:number;
     update_date: number;
     owner_id: number | null;
+    price: number;
+    takenBy: number;
 }

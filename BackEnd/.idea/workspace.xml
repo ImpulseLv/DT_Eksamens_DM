@@ -5,29 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e78b-cfbc-4443-b172-f58f1537887d" name="Changes" comment="Pievienota metode lai dabūt informāciju par esošo lietotāju">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/ChangePasswordDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f4acdf09-c737-4bf7-ab73-16d3169f6ac6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/dto/ImageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/css/main.3bdb7c5f.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/css/main.3bdb7c5f.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/js/488.885f458f.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/js/488.885f458f.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.8791e436.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.8791e436.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.8791e436.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/build/static/media/logo.415682e6110933bfc0eb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Payments/PaymentForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/AnimalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/AnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/AnimalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/entity/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.f1a68ed5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.f1a68ed5.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.f1a68ed5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/css/main.2d51ea2e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/css/main.2d51ea2e.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/496.d9453e39.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/496.d9453e39.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.449677e0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.449677e0.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/build/static/js/main.449677e0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/AnimalList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/Components/AbstractAnimalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/Components/AbstractAnimalForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/Components/AnimalStatusLabel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/Components/AnimalStatusLabel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/NewAnimals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Animals/NewAnimals.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/LoginAndRegister/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/LoginAndRegister/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/MainPage/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/NewUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/NewUsers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/AbstractUserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Components/AbstractUserForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Pages/Users/UserList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/Types/Animal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/Types/Animal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/images/logo.PNG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Kvalifikacijas_Eksamens_DT.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Kvalifikacijas_Eksamens_DT.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +183,15 @@
       <workItem from="1717583455080" duration="2562000" />
       <workItem from="1717693696312" duration="2040000" />
       <workItem from="1717748402126" duration="5880000" />
+      <workItem from="1718114176405" duration="2942000" />
+      <workItem from="1718187284725" duration="2850000" />
+      <workItem from="1718272994026" duration="4535000" />
+      <workItem from="1718356718192" duration="4069000" />
+      <workItem from="1718363891868" duration="3240000" />
+      <workItem from="1718560620281" duration="555000" />
+      <workItem from="1718702813710" duration="3300000" />
+      <workItem from="1718708469512" duration="6116000" />
+      <workItem from="1718790781389" duration="8005000" />
     </task>
     <servers />
   </component>

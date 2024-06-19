@@ -78,11 +78,6 @@ export function UserComponent() {
             sortable: true,
         },
         {
-            name: 'Password',
-            selector: (row: any) => row.password,
-            sortable: true,
-        },
-        {
             name: 'Role',
             selector: (row) => row.roles && row.roles.length > 0 ? row.roles[0].name : 'N/A',
             sortable: true,

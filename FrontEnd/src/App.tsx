@@ -11,9 +11,9 @@ import {NewUsers} from "./Pages/Users/NewUsers";
 import {RolesCheck} from "./Pages/Users/Components/RolesCheck";
 import {UserEditForm} from "./Pages/Users/UserEditForm";
 import AboutPage from "./Pages/MainPage/AboutPage";
-import Footer from "./Pages/MainPage/Footer";
 import AnimalCard from "./Pages/Animals/AnimalCard";
 import Profile from "./Pages/Users/Profile";
+import PaymentForm from "./Pages/Payments/PaymentForm";
 
 export const router = createBrowserRouter([
 
@@ -42,6 +42,10 @@ export const router = createBrowserRouter([
       element: <AnimalCard/>
     },
     {
+        path: "checkout/:animalId",
+        element: <PaymentForm />
+    },
+    {
         path: "animals",
         element: <RolesCheck roles={['ADMIN', 'MODERATOR']}><MyComponent/></RolesCheck>,
     },
@@ -51,7 +55,7 @@ export const router = createBrowserRouter([
     },
     {
         path:"animals/newAnimal",
-        element: <RolesCheck roles={['ADMIN', 'MODERATOR']}><NewAnimals/></RolesCheck>
+        element: <RolesCheck roles={['ADMIN', 'MODERATOR', 'USER']}><NewAnimals/></RolesCheck>
     },
     {
         path:"users/newUsers",

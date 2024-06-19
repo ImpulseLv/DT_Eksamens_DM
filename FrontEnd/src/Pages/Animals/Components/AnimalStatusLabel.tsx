@@ -22,6 +22,10 @@ export const AnimalStatusLabel = (props:AnimalStatusLabelProps) => {
             color = 'red';
             text = 'Taken';
             break;
+        case AnimalStatuss.notVerified:
+            color = 'red';
+            text = 'notVerified';
+            break;
         default:
             color = 'red';
             text = '[ERROR]'

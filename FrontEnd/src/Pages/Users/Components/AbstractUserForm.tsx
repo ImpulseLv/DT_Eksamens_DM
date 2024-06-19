@@ -5,7 +5,6 @@ import { Form, Formik} from "formik";
 import Button from "@mui/material/Button";
 import {FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
 import {User} from "../../../Types/User";
-import {prop} from "react-data-table-component/dist/src/DataTable/util";
 
 export interface AbstractUserFormProps{
     initialValues : User

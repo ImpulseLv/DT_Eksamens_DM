@@ -19,9 +19,11 @@ export const NewAnimals: React.FC = () => {
         statuss: AnimalStatuss.free,
         date_of_birth: moment().format('YYYY-MM-DD'),
         gender: "",
-        creation_date: new Date().getTime(),
+        creationDate: new Date().getTime(),
         update_date: new Date().getTime(),
         owner_id: 1,
+        price: 0,
+        takenBy: 0
     });
     const [isLoading, setIsLoading] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);

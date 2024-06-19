@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.Service.AnimalService;
+import com.example.demo.dto.ImageDto;
 import com.example.demo.entity.Animal;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.data.domain.Sort;
@@ -77,66 +79,35 @@ public class AnimalController {
             @PathVariable Long animalId,
             @RequestParam("files") MultipartFile[] files
     ) {
-        // Проверяем, существует ли директория для загрузки изображений, если нет - создаем
-        File directory = new File(uploadDir);
-        if (!directory.exists()) {
-            directory.mkdirs();
-        }
-
-        for (MultipartFile file : files) {
-            try {
-                // Генерируем уникальное имя файла
-                String filename = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
-                // Сохраняем файл на сервере
-                byte[] bytes = file.getBytes();
-                Path filePath = Paths.get(uploadDir, filename);
-                Files.write(filePath, bytes);
-            } catch (IOException e) {
-                e.printStackTrace();
-                return ResponseEntity.badRequest().body("Failed to upload " + file.getOriginalFilename());
-            }
-        }
-        return ResponseEntity.ok("Files uploaded successfully");
-    }
-
-
-    private void writeToFile(Long animalId, String filename, byte[] data) throws IOException {
+        // Путь к директории для текущего животного
         Path directoryPath = Paths.get(uploadDir, animalId.toString());
-        if (!Files.exists(directoryPath)) {
+
+        try {
+            // Создаем директорию, если она не существует
             Files.createDirectories(directoryPath);
-        }
-        Path filePath = directoryPath.resolve(filename);
-        try (OutputStream os = Files.newOutputStream(filePath, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)) {
-            os.write(data);
+
+            // Обрабатываем каждый файл
+            for (MultipartFile file : files) {
+                // Генерируем уникальное имя файла
+                String filename = UUID.randomUUID() + "_" + file.getOriginalFilename();
+
+                // Сохраняем файл в директории
+                byte[] bytes = file.getBytes();
+                animalService.writeToFile(animalId, filename, bytes); // Используем writeToFile из AnimalService
+            }
+
+            return ResponseEntity.ok("Files uploaded successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body("Failed to upload files");
         }
     }
 
-    private int getNextImageNumber(Long animalId, String extension) throws IOException {
-        Path directoryPath = Paths.get(uploadDir, animalId.toString());
-        if (!Files.exists(directoryPath)) {
-            return 1;
-        }
-        try (Stream<Path> files = Files.list(directoryPath)) {
-            return files
-                    .filter(Files::isRegularFile)
-                    .map(path -> path.getFileName().toString())
-                    .filter(name -> name.matches(animalId + "_\\d+\\." + extension))
-                    .map(name -> name.replace(animalId + "_", "").replace("." + extension, ""))
-                    .mapToInt(Integer::parseInt)
-                    .max()
-                    .orElse(0) + 1;
-        }
-    }
-
-    private String getFileExtension(String filename) {
-        int dotIndex = filename.lastIndexOf('.');
-        return (dotIndex == -1) ? "" : filename.substring(dotIndex + 1);
-    }
-
-    @GetMapping("/getImage")
+    @GetMapping("/getImage/{animalId}/{filename}")
     @ResponseBody
-    public ResponseEntity<InputStreamResource> getImageDynamicType(@RequestParam("animalId") Long animalId, @RequestParam("filename") String filename, @RequestParam("jpg") boolean jpg) {
-        MediaType contentType = jpg ? MediaType.IMAGE_JPEG : MediaType.IMAGE_PNG;
+    public ResponseEntity<InputStreamResource> getImageDynamicType(
+            @PathVariable("animalId") Long animalId, @PathVariable("filename") String filename) {
+        MediaType contentType = MediaType.IMAGE_PNG;
         Path filePath = Paths.get(uploadDir, animalId.toString(), filename);
         try {
             InputStream in = Files.newInputStream(filePath, StandardOpenOption.READ);
@@ -147,6 +118,23 @@ public class AnimalController {
             e.printStackTrace();
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @GetMapping("/animals/{animalId}/images")
+    @ResponseBody
+    public ResponseEntity<List<ImageDto>> getAnimalImages(@PathVariable("animalId") Long animalId) {
+        try {
+            List<ImageDto> images = animalService.getImagesForAnimal(animalId);
+            return ResponseEntity.ok(images);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+    @PutMapping("/{id}/status")
+    public ResponseEntity<Animal> updateAnimalStatus(@PathVariable Long id, @RequestParam Animal.AnimalStatuss status) {
+        Animal updatedAnimal = animalService.updateAnimalStatus(id, status);
+        return ResponseEntity.ok(updatedAnimal);
     }
 }
 

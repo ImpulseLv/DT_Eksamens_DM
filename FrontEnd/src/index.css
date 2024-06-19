@@ -76,7 +76,6 @@ h3 {
   background: linear-gradient(to right, grey, darkgrey);
   color: #fff;
   padding: 10px 0;
-  position: fixed;
   justify-content: center;
   width: 100%;
   z-index: 1000;
@@ -93,7 +92,7 @@ h3 {
 }
 
 .navbar-logo a {
-  font-size: 24px;
+  font-size: 48px;
   color: #fff;
   text-decoration: none;
 }
@@ -341,12 +340,6 @@ footer .footer-bottom {
   margin-bottom: 10px;
 }
 
-.avatar {
-  width: 110px; /* Устанавливаем ширину изображения */
-  height: 120px; /* Устанавливаем высоту изображения */
-  border-radius: 50%; /* Делаем изображение круглым */
-  margin-bottom: 10px; /* Отступ снизу от изображения */
-}
 
 .user-details {
   text-align: center; /* Выравниваем текст по центру */
@@ -354,4 +347,69 @@ footer .footer-bottom {
 
 .username {
   margin-bottom: 5px; /* Отступ снизу от имени пользователя */
+}
+
+.animalCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.media {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  width: 345px;
+  margin: 20px;
+}
+
+.dialogMedia {
+  height: 200px;
+  object-fit: cover;
+}
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.form-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.card-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 160px; /* Установка ширины */
+  height: 160px; /* Установка высоты */
+  border-radius: 50%; /* Делаем изображение круглым */
+  object-fit: cover; /* Чтобы изображение полностью заполнило круг */
+  border: 2px solid #fff; /* Добавляем белую обводку, если нужно */
 }
